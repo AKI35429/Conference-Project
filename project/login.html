@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Login</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                position: sticky;
+                
+            }
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0px;
+                overflow: hidden;
+                background-color: black;
+            }
+            li {
+                float: left;
+            }
+            li a {
+                display:grid;
+                color: white;
+                
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 15px;
+            }
+            li a:hover:not(.active) {
+                background-color: white;
+                color: black;
+            }
+            .create{
+                background-color: DodgerBlue;
+                box-shadow: inset;
+                border-radius: 6px;
+                margin-top: 6px;
+                margin-bottom: 6px;
+                height: 7px;
+            }
+            .event{
+                text-align: center;
+                margin-top: -6px;
+            }
+            .login{
+                position:-webkit-sticky;
+                left: 37%;
+                width: 420px;
+                height:520px;
+                background: rgb(255, 255, 255);
+                color: rgb(4, 4, 4);
+                box-sizing: border-box;
+                padding: 70px 30px;
+                text-align: center;
+                font-family: 'Times New Roman', Times, serif;
+                border:10px white;
+            }
+            .login input[type="text"],input[type="password"]{
+                font-size: 15px;
+                height: 30px;
+                width:80%;
+                border: 1px solid #ccc;
+                margin: 8px 0;
+                display: inline-block;
+                box-sizing: border-box;
+                border-radius: 4px;
+                padding:10px 10px;
+            }
+            h1{
+                margin: 0;
+                padding: 0 0 20px;
+                font-weight:bolder;
+                font-size: 30px;
+            }
+            .login input[type="submit"]{
+                margin-top: 10px;
+                background-color: #FF5151;
+                color: white;
+                font-size: 18px;
+                height: 30px;
+                width:80%;
+                text-align: center;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+                margin-bottom: 5px;
+            }
+            .login input[type="submit"]:hover{
+                background-color: #03A9F4;
+            }
+            .link{
+                margin-bottom: 10px;
+            }
+            .required{
+                color: red;
+            }
+            .email{
+                text-align: start;
+                margin-top: 20px;
+                margin-left:35px;
+                margin-bottom: 3px;
+            }
+            .emails{
+                text-align: start;
+                margin-left:35px;
+                margin-bottom: 3px;
+            }
+            .boundary {
+                display: flex;
+                flex-direction: row;
+                font-style: normal;
+                font-weight:bold;
+                font: size 15px;
+                line-height: 1px;
+                color: gray;
+                margin-top: 8px;
+            }
+            
+            .boundary::before, .boundary::after {
+                content: '';
+                flex: 1 1;
+                border-bottom: 0.125px solid gray;
+                margin: 3px;
+                margin-left: 10px;
+                margin-right: 10px;
+                color: gray;
+            }
+            .account{
+                margin: 4px;
+                text-align: left;
+                margin-left: 36px;
+                margin-bottom: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar background">
+            <ul class="nav-list">
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="#Event">Event</a></li>
+                <li><a href="#Explore">Explore</a></li>
+                <li><a href="#About Us">About Us</a></li>
+                <li style="float:right"><a class="active" href="#SignUp">SignUp</a></li>
+                <li style="float:right"><a class="active" href="#LogIn">LogIn</a></li>
+                <li style="float:right"><a class="create" href="#CreateEvent"><p class="event">Create Event</p></a></li>
+            </ul>
+        </nav>
+        <div class="login">
+            <h1>LOGIN</h1>
+                <div class="link">
+                    <a href="#google"><img src="https://assets.interviewbit.com/assets/jobs/logged_out_referral/google-oauth-24cba186e53a1c30ef682062820af75fb8fb0814bd1d6ef1c448e888dfe39323.png.gz" alt="googlepic" style="height: 35px; width: 35px; padding: 20px;"></a>
+                    <a href="#facebook"><img src="https://assets.interviewbit.com/assets/jobs/logged_out_referral/fb-oauth-517731fada42c712a42e21bf11e592ed9aaa24d6444e251754a3d828f7b5b28e.png.gz" alt="fbpic" style="height: 35px; width: 35px;padding: 20px;"></a>
+                    <a href="#linkedin"><img src="https://assets.interviewbit.com/assets/jobs/logged_out_referral/ln-oauth-8fa2b2518a2b8c74034e267e3a26c0c808fe6c7f90e7602b8ce823a77ed13f8e.png.gz" alt="linkpic" style="height: 35px; width: 35px;padding: 20px;"></a>
+                    <a href="#apple"><img src="https://www.transparentpng.com/thumb/apple-logo/d9RxbG-apple-logo-free-png.png" alt="applepic" style="height: 35px; width: 30px;padding: 20px;"></a>
+                    <span class="boundary">or</span>   
+                </div>
+            <form>
+                
+                <div class="email">Email<span class="required">*</span></div>
+                <input type="text" id="email" name="email" placeholder="Email Address ">
+                <div class="emails">Password<span class="required">*</span></div>
+                <input type="text" id="password" name="password" placeholder="Password">
+                <input type="submit" name="login"  value="Login"><br>
+                <p class="account"><a class="forgot" href="#">Forgot your password?</a></p>
+                <p class="account">Don't have an account?<a href="#">SignUp</a></p>
+            </form>
+        </div>
+    </body>
+</html>
