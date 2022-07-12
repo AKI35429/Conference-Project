@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ConfeMan | Profile</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: black;
+        }
+
+        nav li {
+            float: left;
+        }
+
+        nav li a {
+            display: flex;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav li a:hover:not(.active) {
+            background-color: white;
+            color: black;
+        }
+
+        .create , #editProf{
+            background-color: DodgerBlue;
+            color: white;
+            border-radius: 4px;
+            font-size: 15px;
+            text-align: center;
+            height: 30px;
+            width: 120px;
+            text-decoration : none;
+            display : flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        body {
+            /* border: 2px solid red; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        nav {
+            background-color: black;
+            color: rgb(255, 255, 255);
+            width: 100%;
+        }
+
+        .main {
+            width: 70%;
+            /* border : 2px solid red; */
+            margin-top: 20px;
+        }
+
+        .cover {
+            width: 100%;
+            height: 25vh;
+            border-radius: 10px;
+        }
+
+        .profile {
+            width: 16vh;
+            position: relative;
+            bottom: 9vh;
+            left: 13vh;
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+
+        .Container {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            /* border: 2px solid red; */
+            position : relative;
+            bottom : 5vh;
+        }
+        .social , .Details , .interests{
+            padding : 30px;
+            display : flex;
+            flex-direction: column;
+            /* align-items: center; */
+            flex-grow : 1;
+            border-top : 2px solid rgb(189, 188, 188);
+            border-radius : 10px;
+        }
+        .social {
+            align-items: center;
+        }
+        .Details{
+            border : 2px solid rgb(189, 188, 188);
+            border-bottom : none;
+        }
+        .Details p{
+            margin : 5px;
+            margin-left : 10px;
+        }
+        #editProf{
+            margin-top : 10px;
+        }
+        .social img {
+            width: 32px;
+            margin: 9px;
+        }
+        .social .imgLinks a{
+            display : flex;
+            align-items : center;
+            justify-content: center;
+        }
+        .social .imgLinks{
+            display : flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .interestItems{
+            display : flex;
+            flex-direction : column;
+            flex-wrap : wrap;
+        }
+        .interestItems p{
+            background-color : rgb(25, 25, 25);
+            color : rgb(201, 200, 200);
+            /* margin : 10px; */
+            padding : 10px;
+            border-radius : 5px;
+            margin:10px 0px;
+            width : 70%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar background">
+        <ul class="nav-list">
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="#Event">Event</a></li>
+            <li><a href="#Explore">Explore</a></li>
+            <li><a href="#About Us">About Us</a></li>
+            <li>
+                <a class="active" href="#SignUp">SignUp</a>
+            </li>
+            <li><a class="active" href="#LogIn">LogIn</a></li>
+            <li>
+                <a class="active" href="#CreateEvent"><button class="create">Create Event</button></a>
+            </li>
+        </ul>
+    </nav>
+    <div class="main">
+        <img class="cover" src="../asserts/default-cover.png" alt="no image"/>
+        <img class="profile" src="../asserts/no profile pic.jpg" alt="no image"/>
+        <div class="Container">
+            <div class="social">
+                <h2 id="userName">Dancin_monk</h2>
+                <div class="imgLinks">
+                    <a href="#"><img src="../asserts/facebook.png" alt="no_image" /></a>
+                    <a href="#"><img src="../asserts/Twitter.png" alt="no_image" /></a>
+                    <a href="#"><img src="../asserts/linkedin.png" alt="no_image" /></a>
+                </div>
+            </div>
+            <div class="Details">
+                <h2>Personal Details</h2>
+                <p>Name : roronoa Zoro</p>
+                <p>Insitute : PirateHunter institute of technology</p>
+                <p>Email : zoroLovesmihawk@gmail.com</p>
+                <p>Address : onigiri , south blue , world</p>
+                <p>Phone no : 6665555444</p>
+                <a href="#" id = "editProf" class="editProfile">Edit Profile</a>
+            </div>
+            <div class="interests">
+                <h2>Interests</h2>
+                <div class="interestItems">
+                    <p>Programming</p>
+                    <p>Movies</p>
+                    <p>sword Fighting</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>copyright &copy; ConfeMan . All rights Reserved</p>
+    </footer>
+</body>
+
+</html>

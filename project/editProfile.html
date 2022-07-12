@@ -1,0 +1,154 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: black;
+        }
+
+        nav li {
+            float: left;
+        }
+
+        nav li a {
+            display: flex;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav li a:hover:not(.active) {
+            background-color: white;
+            color: black;
+        }
+
+        .create,
+        .deletepic,
+        .updatepic {
+            background-color: DodgerBlue;
+            color: white;
+            border-radius: 4px;
+            font-size: 15px;
+            text-align: center;
+            /* height: 30px;
+            width: 120px; */
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            padding : 5px 10px;
+        }
+
+        .deletepic {
+            background-color: grey;
+        }
+
+        body {
+            /* border: 2px solid red; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        nav {
+            background-color: black;
+            color: rgb(255, 255, 255);
+            width: 100%;
+        }
+
+        .main {
+            /* border: 20px solid red; */
+            /* padding : 50px; */
+            width: 70%;
+        }
+
+        .coverImage {
+            width: 100%;
+            height: 25vh;
+            border-radius: 10px;
+        }
+
+        .profileImage {
+            width: 16vh;
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+
+        .images {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* border : 2px solid black; */
+        }
+        .cover{
+            position : relative;
+            top : 6vh;
+        }
+        .profile {
+            width: 16vh;
+            position: relative;
+            bottom: 12vh;
+            left: 5vw;
+        }
+        .updatepic , .deletepic{
+            margin-top : 5px;
+            cursor : pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar background">
+        <ul class="nav-list">
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="#Event">Event</a></li>
+            <li><a href="#Explore">Explore</a></li>
+            <li><a href="#About Us">About Us</a></li>
+            <li>
+                <a class="active" href="#SignUp">SignUp</a>
+            </li>
+            <li><a class="active" href="#LogIn">LogIn</a></li>
+            <li>
+                <a class="active" href="#CreateEvent"><button class="create">Create Event</button></a>
+            </li>
+        </ul>
+    </nav>
+    <div class="main">
+        <div class="cover images">
+            <img class="coverImage" src="../asserts/default-cover.png" alt="no image" />
+            <button class="updatepic">Update Cover Pic</button>
+            <button class="deletepic">Delete</button>
+        </div>
+        <div class="profile images">
+            <img class="profileImage" src="../asserts/no profile pic.jpg" alt="no image" />
+            <button class="updatepic">Update Profile Pic</button>
+            <button class="deletepic">Delete</button>
+        </div>
+    </div>
+    <form action="">
+        <div class="PersonalDetails">
+            <h2 style = "color : rgb(89, 186, 255);">Personal Details</h2>
+            <div class="Details1">
+                <label for=""></label>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
